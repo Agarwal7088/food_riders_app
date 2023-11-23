@@ -1,9 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:food_app/authentication/auth_screen.dart';
-import 'package:food_app/global/global.dart';
-import 'package:food_app/mainscreens/home_screen.dart';
+import 'package:food_riders_app/authentication/auth_screen.dart';
+import 'package:food_riders_app/global/global.dart';
+import 'package:food_riders_app/mainscreens/home_screen.dart';
+// import 'package:food_app/authentication/auth_screen.dart';
+// import 'package:food_app/global/global.dart';
+// import 'package:food_app/mainscreens/home_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({super.key});
@@ -14,15 +17,16 @@ class MySplashScreen extends StatefulWidget {
 
 class _MySplashScreenState extends State<MySplashScreen> {
   startTimer() {
-    
-    Timer(Duration(seconds:3), () async {
-      //if seller is logged in or not
-      if(firebaseAuth.currentUser!=null){
- Navigator.push(context, MaterialPageRoute(builder: (c) => HomeScreen()));
+    Timer(Duration(seconds: 3), () async {
+      //if riders is logged in already
+      if (firebaseAuth.currentUser != null) {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => HomeScreen()));
+      } //if riders is logged in or not
+      else {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (c) => authscreen()));
       }
-     else{
-       Navigator.push(context, MaterialPageRoute(builder: (c) => authscreen()));
-     }
     });
   }
 
@@ -42,7 +46,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/splash.png"),
+              Image.asset("images/logo.png"),
               SizedBox(
                 height: 8,
               ),
