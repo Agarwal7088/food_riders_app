@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 import 'register.dart';
 
-
 class AuthScreen extends StatefulWidget {
   const AuthScreen({Key? key}) : super(key: key);
 
@@ -19,37 +18,41 @@ class _AuthScreenState extends State<AuthScreen> {
         appBar: AppBar(
           flexibleSpace: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.amber,
-                  Colors.cyan,
-                ],
-                begin:  FractionalOffset(0.0, 0.0),
-                end:  FractionalOffset(1.0, 0.0),
-                stops: [0.0, 1.0],
-                tileMode: TileMode.clamp,
-              )
-            ),
+                gradient: LinearGradient(
+              colors: [
+                Colors.amber,
+                Colors.cyan,
+              ],
+              begin: FractionalOffset(0.0, 0.0),
+              end: FractionalOffset(1.0, 0.0),
+              stops: [0.0, 1.0],
+              tileMode: TileMode.clamp,
+            )),
           ),
           automaticallyImplyLeading: false,
           title: const Text(
-              "iFood",
+            "Get Fed",
             style: TextStyle(
-              fontSize: 60,
-              color: Colors.white,
-              fontFamily: "Signatra",
-              letterSpacing: 6
-            ),
+                fontSize: 60,
+                color: Colors.white,
+                fontFamily: "Signatra",
+                letterSpacing: 6),
           ),
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
               Tab(
-                icon: Icon(Icons.lock, color: Colors.white,),
+                icon: Icon(
+                  Icons.lock,
+                  color: Colors.white,
+                ),
                 text: "Login",
               ),
               Tab(
-                icon: Icon(Icons.person, color: Colors.white,),
+                icon: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                ),
                 text: "Register",
               ),
             ],
@@ -59,15 +62,14 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
         body: Container(
           decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [
-                Colors.amber,
-                Colors.cyan,
-              ],
-            )
-          ),
+              gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Colors.amber,
+              Colors.cyan,
+            ],
+          )),
           child: const TabBarView(
             children: [
               LoginScreen(),
