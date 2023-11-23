@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '691392318364',
     projectId: 'food-54d68',
     storageBucket: 'food-54d68.appspot.com',
-    androidClientId: '691392318364-vrjrt77pgbh2qopi3968h5tt9h8njdrg.apps.googleusercontent.com',
+    androidClientId:
+        '691392318364-vrjrt77pgbh2qopi3968h5tt9h8njdrg.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodRidersApp',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '691392318364',
     projectId: 'food-54d68',
     storageBucket: 'food-54d68.appspot.com',
-    androidClientId: '691392318364-vrjrt77pgbh2qopi3968h5tt9h8njdrg.apps.googleusercontent.com',
+    androidClientId:
+        '691392318364-vrjrt77pgbh2qopi3968h5tt9h8njdrg.apps.googleusercontent.com',
     iosBundleId: 'com.example.foodRidersApp.RunnerTests',
   );
 }
